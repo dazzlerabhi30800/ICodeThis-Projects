@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-background-color: #dce6ef;
+    --red-color: #c80c0b;
+}
+
+
+body {
+    min-height: 100vh;
+    background: var(--main-background-color);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    width: clamp(300px, 100%, 370px);
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    background: #eeeded;
+}
+
+button {
+    border: none;
+    outline: none;
+    width: fit-content;
+}
+
+
+.remove-btn {
+    align-self: last baseline;
+    color: #9e9d9d;
+    font-size: 1.2rem;
+}
+
+.phone-icon {
+    background: #f2e3c6;
+    padding: 1rem 1.3rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: #f59666;
+}
+
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+.text-container p {
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+.not {
+    border: 1px solid var(--red-color);
+    color: var(--red-color);
+}
+
+.add {
+    color: #fff;
+    background: var(--red-color);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: first baseline;
+    gap: 1rem;
+    width: 100%;
+}
+
+input {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.subscribe {
+    width: 100%;
+    background: var(--red-color);
+    color: #fff;
+}
+
+@media (hover:hover) {
+    button {
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        filter: brightness(130%) contrast(80%);
+    }
+}
+
+
+@media Screen and (min-width: 800px) {
+    .card {
+        position: relative;
+    }
+
+    .card:nth-child(1) {
+        transform: translate(-40px, -100px);
+    }
+
+    .card:nth-child(2) {
+        transform: translate(20px, 100px);
+    }
+}
