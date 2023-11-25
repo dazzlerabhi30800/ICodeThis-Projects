@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Invite Cards</title>
+</head>
+
+<body>
+    <main>
+        <!-- First Card -->
+        <div class="card first">
+            <div class="invite-text">
+                <h1>Invite People</h1>
+                <p>All Invited People will be greatned access to all site within your organization</p>
+            </div>
+            <div class="invite-toggler">
+                <button class="invite email">Invite with email</button>
+                <button class="invite link active">Invite with link</button>
+                <div class="button-background"></div>
+            </div>
+            <div class="add-to-team-wrapper">
+                <p>Add to Team</p>
+                <form class="copy-link">
+                    <input type="text" readonly value="https://examplelinktoshare/my-team/jid98490032">
+                    <button class="btn copy">Copy Link</button>
+                </form>
+                <small>
+                    People with organisation email will be able to joinwith a link. <a
+                        href="javascript:;">Deactivate</a> it if you don't need this.
+                </small>
+            </div>
+        </div>
+        <!-- Second Card -->
+        <div class="card second">
+            <h1>Invite to team</h1>
+            <div class="invite-wrapper">
+                <div class="team-member">
+                    <small>Team member</small>
+                    <input type="email" class="team-email" placeholder="Email address">
+                    <input type="email" class="team-email" placeholder="Email address">
+                    <button class="add"><i class="fas fa-plus"></i><span>Add More</span></button>
+                </div>
+                <div class="permission">
+                    <small>Permission</small>
+                    <button class="dropdown-btn">Read Only <i class="fas fa-chevron-down"></i></button>
+                    <ul class="drop-down">
+                        <li>Read Only</li>
+                        <li>Read & Exit</li>
+                        <li>Admin</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn send">Send invites</button>
+        </div>
+        <!-- Third Card -->
+        <div class="card third">
+            <h1>Invite to Board</h1>
+            <button class="remove-btn"><i class="fas fa-times"></i></button>
+            <input type="email" value="email@address.com" placeholder="Enter your invite email">
+            <div class="invite-link">
+                <h2>Invite with Link</h2>
+                <p>Anyone with link can view your board. <a href="javascript:;">Create Link</a></p>
+            </div>
+
+            <button class="btn send-invitation">Send Invitation</button>
+        </div>
+
+
+    </main>
+</body>
+<script src="./index.js"></script>
+
+</html>

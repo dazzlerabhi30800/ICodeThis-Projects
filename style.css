@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+}
+
+
+:root {
+    --background-circle-dimensions: 200px;
+    --blur-density: 100px;
+}
+
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+h1 {
+    font-size: 1.1rem;
+}
+
+h2 {
+    font-size: 0.9rem;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+small {
+    font-size: 0.7rem;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    grid-template-columns: repeat(1, 100%);
+    gap: 1.5rem;
+    place-content: center;
+    background: rgb(232, 222, 238);
+}
+
+main::after {
+    position: absolute;
+    content: "";
+    width: var(--background-circle-dimensions);
+    height: var(--background-circle-dimensions);
+    filter: blur(var(--blur-density));
+    background: linear-gradient(to right, rgb(131, 112, 238), rgb(248, 155, 238));
+    border-radius: 0 50% 50% 0;
+    top: 0;
+    left: 0;
+}
+
+
+main::before {
+    position: absolute;
+    content: "";
+    width: var(--background-circle-dimensions);
+    height: var(--background-circle-dimensions);
+    filter: blur(var(--blur-density));
+    background: linear-gradient(to right, rgb(238, 146, 112), rgb(248, 155, 238));
+    border-radius: 50% 0 0 50%;
+    bottom: 0;
+    right: 0;
+}
+
+.card {
+    background: #ffffff60;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px 5px #00000020;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+    z-index: 44;
+}
+
+
+
+
+.invite-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+.invite-toggler {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    gap: 5px;
+    position: relative;
+    background: #ccc;
+    width: fit-content;
+    padding: 5px;
+}
+
+
+.invite {
+    padding: 8px 12px;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.3s linear;
+    z-index: 44;
+}
+
+
+.button-background {
+    background: #fff;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.add-to-team-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-to-team-wrapper p {
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px 4px #00000018;
+    border-radius: 5px;
+    padding: 4px;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    font-weight: 500;
+}
+
+
+.btn {
+    border: none;
+    outline: none;
+    background: rgb(139, 121, 242);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+.copy {
+    padding: 10px;
+    font-size: 0.7rem;
+}
+
+.add-to-team-wrapper small {
+    margin-top: 1rem;
+}
+
+small a {
+    color: #000;
+}
+
+
+/* Second Card */
+
+.invite-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.team-member,
+.permission {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+}
+
+.invite-wrapper small {
+    font-weight: 600;
+}
+
+.team-member input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.add {
+    color: rgb(123, 100, 238);
+    font-weight: 600;
+    margin: 10px 0 0 4px;
+    width: fit-content;
+}
+
+
+.permission button {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.drop-down {
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    gap: 5px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 0 10px 3px #21212137;
+    font-size: 0.8rem;
+    font-weight: 500;
+    scale: 0;
+    opacity: 0;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.drop-down.show {
+    opacity: 1;
+    display: flex;
+    scale: 1;
+}
+
+.drop-down li {
+    padding: 10px;
+    border-radius: 2px;
+    transition: 0.3s linear;
+}
+
+.send {
+    padding: 12px;
+}
+
+
+
+/* Third Card */
+
+input {
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 5%;
+    right: 6%;
+    font-size: 1.2rem;
+    color: #6f6f6f;
+}
+
+.invite-link {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.invite-link p {
+    font-size: 0.75rem;
+}
+
+
+.send-invitation {
+    padding: 13px;
+}
+
+@media Screen and (min-width: 750px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    :root {
+        --background-circle-dimensions: 450px;
+        --blur-density: 200px;
+    }
+
+    .card {
+        padding: 3.2rem;
+        width: fit-content;
+    }
+
+
+    .invite-wrapper {
+        flex-direction: row;
+    }
+
+
+    .drop-down {
+        text-align: left;
+        display: flex;
+    }
+
+    .drop-down.active {
+        opacity: 1;
+        scale: 1;
+    }
+
+    .send {
+        width: fit-content;
+        padding: 12px 22px;
+    }
+
+
+    .first {
+        grid-column: 1 / span 2;
+    }
+
+    .second {
+        width: 450px;
+        transform: translateY(-60px);
+    }
+
+    .third {
+        transform: translate(-60px, -70px);
+    }
+
+    .permission button {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+
+
+    /* Third Card */
+    .third {
+        height: 380px;
+    }
+
+    .send-invitation {
+        justify-self: flex-end;
+        margin-top: auto;
+    }
+
+}
+
+
+@media (hover:hover) {
+    button {
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+
+
+    .btn:hover {
+        background: rgb(102, 76, 247);
+    }
+
+    .add:hover span {
+        text-decoration: underline;
+    }
+
+
+    .permission button:hover {
+        background: #ccc;
+    }
+
+    .drop-down li {
+        cursor: pointer;
+    }
+
+    .drop-down li:hover {
+        background: #d2cdf3;
+    }
+
+
+    .remove-btn:hover {
+        color: #000;
+    }
+}
