@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --body-background: #1b2138;
+    --main-background: #242c42;
+    --layout-hover-background: #486b9498;
+    --group-layout: row;
+    --group-card-layout: column;
+    --group-card-basis: 22%;
+    --card-height: 160px;
+    --justify-group-layout: center;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    background-color: var(--body-background);
+}
+
+
+a {
+    text-decoration: none;
+    color: #9d9a9a;
+}
+
+main {
+    width: clamp(300px, 95%, 900px);
+    background: var(--main-background);
+    border-radius: 10px;
+    height: 500px;
+    box-shadow: 1px 1px 10px 3px #00000059;
+    /* gap: 1.5rem; */
+    padding: 1rem;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    border-radius: 15px;
+    height: 100%;
+    background-color: var(--body-background);
+    padding: 0.6rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.link {
+    padding: 10px 8px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s linear;
+}
+
+.link.active {
+    background: #41606e48;
+}
+
+
+/* Main Section */
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 5px 1rem;
+    justify-content: space-between;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.6rem;
+}
+
+.view--toggler {
+    display: flex;
+    align-items: center;
+    border: 2px solid #1d1d1d;
+    border-radius: 10px;
+}
+
+.layout {
+    padding: 8px 10px;
+    font-size: 1.2rem;
+    border-radius: 3px;
+}
+
+.layout:nth-child(1) {
+    border-right: 2px solid #1a1a1a;
+}
+
+
+.layout:nth-child(1).active {
+    background: var(--layout-hover-background);
+    border-radius: 10px 0 0 10px;
+}
+
+.layout:nth-child(2).active {
+    background: var(--layout-hover-background);
+    border-radius: 0 10px 10px 0;
+}
+
+/* Group Card Wrapper */
+.group--wrapper {
+    display: flex;
+    /* align-items: start; */
+    flex-direction: var(--group-layout);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0.6rem 1.3rem;
+    flex-grow: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    flex-shrink: 0;
+    height: 400px;
+}
+
+.group--wrapper::-webkit-scrollbar {
+    background: rgb(100, 99, 99);
+    width: 3px;
+}
+
+.group--wrapper::-webkit-scrollbar-thumb {
+    background: #b792f2;
+    border-radius: 5px;
+    width: 5px;
+}
+
+.create-group,
+.group {
+    height: var(--card-height);
+    flex-basis: var(--group-card-basis);
+    display: flex;
+    flex-direction: var(--group-card-layout);
+    justify-content: var(--justify-group-layout);
+    align-items: center;
+    text-align: center;
+    gap: 7px;
+    background: #3e3e58;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px 3px #1d1c1c84;
+    transition: 0.3s linear;
+}
+
+.create--btn {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #282727;
+}
+
+
+.group {
+    background: var(--body-background);
+    position: relative;
+}
+
+.group::after {
+    position: absolute;
+    content: '';
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background: rgb(247, 141, 242);
+    opacity: 0;
+}
+
+.group.active::after {
+    opacity: 1;
+}
+
+.group>img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.members {
+    font-size: 0.8rem;
+    color: #aaa8a8;
+}
+
+
+
+
+
+@media (hover : hover) {
+    .link:hover {
+        background: #41606e48;
+    }
+
+    .layout {
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+
+    .layout:nth-child(1):hover {
+        background: var(--layout-hover-background);
+        border-radius: 10px 0 0 10px;
+    }
+
+    .layout:nth-child(2):hover {
+        background: var(--layout-hover-background);
+        border-radius: 0 10px 10px 0;
+    }
+
+    .group,
+    .create-group {
+        cursor: pointer;
+    }
+
+    .group:hover {
+        background: rgb(18, 20, 43);
+    }
+}
