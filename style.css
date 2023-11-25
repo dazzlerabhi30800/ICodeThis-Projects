@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-background-color: #cdebea;
+    --box-shadow-color: #b9d4e6;
+    --stock-color: #82be42;
+    --checkout-color: #4379ff;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-background-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: -10px -10px 0 3px var(--box-shadow-color);
+    border-radius: 30px;
+    padding: 2rem 1.5rem;
+    width: clamp(330px, 60%, 380px);
+    background: #fff;
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+.heading--wrapper p {
+    font-size: 1rem;
+    margin: 5px auto;
+}
+
+.product {
+    display: flex;
+    gap: 1rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 5px 0;
+}
+
+.quantity,
+.btn {
+    padding: 3px 10px;
+    font-size: 1.1rem;
+}
+
+.btn {
+    border: none;
+    background: #e1f7f7;
+    outline: none;
+}
+
+.quantity {
+    width: 40px;
+    text-align: center;
+}
+
+
+.payment-summary {
+    padding: 12px 0 0;
+    border-top: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.payment span {
+    font-weight: 600;
+}
+
+
+a {
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.checkout-btn {
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 1rem;
+    background: var(--checkout-color);
+    font-size: 1.1rem;
+    color: #fff;
+    border-radius: 30px;
+}
+
+@media (hover: hover) {
+    button {
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: cyan;
+    }
+
+    .checkout-btn:hover {
+        background: #2765f6;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
