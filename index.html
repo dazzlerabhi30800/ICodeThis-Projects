@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gift Membership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-indigo-100 min-h-screen flex justify-center">
+    <main class="flex flex-col gap-10 items-center py-10">
+      <div class="heading">
+        <img
+          class="mx-auto"
+          width="200"
+          height="200"
+          src="https://i.ibb.co/zrLX3VM/gift.png"
+          alt="gift"
+        />
+        <h1 class="text-3xl font-medium">Select a gift membership</h1>
+      </div>
+      <section class="gift__section flex flex-col gap-10 p-2">
+        <div
+          class="gift__card flex items-center justify-between bg-white p-7 rounded-md shadow-md"
+        >
+          <div class="text__info basis-1/2">
+            <h2 class="font-bold text-xl">U.S. Discovery</h2>
+            <p class="my-2">
+              Your Friends or family members can explore their American roots
+              with access to billions
+            </p>
+          </div>
+          <div
+            class="membership__selector bg-emerald-50 p-5 flex flex-col gap-2 border-sm"
+          >
+            <div class="membership flex items-center gap-1">
+              <input id="price-1" type="checkbox" />
+              <label class="font-bold" for="price-1"
+                >$99 /
+                <span class="text-gray-800 text-sm font-medium"
+                  >6 months</span
+                ></label
+              >
+            </div>
+            <div class="membership flex items-center gap-1">
+              <input id="price-2" type="checkbox" />
+              <label class="font-bold" for="price-2"
+                >$189 /
+                <span class="text-gray-800 text-sm font-medium"
+                  >12 months</span
+                ></label
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="gift__card flex items-center justify-between bg-white p-9 pb-7 rounded-md shadow-md"
+        >
+          <div class="text__info basis-1/2">
+            <h2 class="font-bold text-xl">World Explorer</h2>
+            <p class="my-2">
+              Recepients will be able to search for U.S and international family
+              with access to billions of records from 80+ countries.
+            </p>
+          </div>
+          <div
+            class="membership__selector bg-emerald-50 p-5 flex flex-col gap-2 border-sm"
+          >
+            <div class="membership flex items-center gap-1">
+              <input id="price-3" type="checkbox" />
+              <label class="font-bold" for="price-3"
+                >$149 /
+                <span class="text-gray-800 text-sm font-medium"
+                  >6 months</span
+                ></label
+              >
+            </div>
+            <div class="membership flex items-center gap-1">
+              <input id="price-4" type="checkbox" />
+              <label class="font-bold" for="price-4"
+                >$299 /
+                <span class="text-gray-800 text-sm font-medium"
+                  >12 months</span
+                ></label
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <span class="text-center"
+        >Keep in mind that is a one-time, non-renewing membership and you will
+        only the billed for the cost of the membership you select above</span
+      >
+      <button
+        type="button"
+        disabled="disabled"
+        class="text-white font-bold py-3 px-6 rounded-md bg-red-400"
+      >
+        Order Now
+      </button>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
