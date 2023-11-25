@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LeaderBoard</title>
+  </head>
+  <body class="flex flex-col gap-2 text-white justify-center items-center">
+    <main
+      class="text-white flex flex-col w-full gap-2 max-w-[900px] bg-white/10 backdrop-blur-[10px]"
+    >
+      <!-- LeaderBoard Header Red Background -->
+      <header class="bg-red-400">
+        <!-- LeaderBoard Category -->
+        <div
+          class="flex items-center justify-end gap-5 uppercase mb-2 p-4 px-6"
+        >
+          <span class="p-1 px-2 rounded-xl text-black/70 font-medium bg-red-300"
+            >leaderBoard</span
+          >
+          <div class="w-[1px] h-[25px] bg-gray-100"></div>
+          <span class="">routes</span>
+          <div class="w-[1px] h-[25px] bg-gray-100"></div>
+          <span class="">live</span>
+          <div class="w-[1px] h-[25px] bg-gray-100"></div>
+          <span class="">events</span>
+        </div>
+        <!-- Timeline -->
+        <div class="flex items-center gap-5 text-[0.8rem] py-5 px-8">
+          <span class="">Week</span>
+          <div class="w-[1px] h-[25px] bg-gray-100"></div>
+          <span class="">Month</span>
+          <div class="w-[1px] h-[25px] bg-gray-100"></div>
+          <span class="">Year</span>
+          <div class="w-[1px] h-[25px] bg-gray-100"></div>
+          <span class="p-1 px-2 rounded-xl font-medium bg-red-300 text-black/70"
+            >All Time</span
+          >
+        </div>
+        <div></div>
+      </header>
+
+      <div>
+        <table class="w-full leaderboard"></table>
+      </div>
+    </main>
+    <footer class="flex flex-col gap-1 w-full max-w-[900px]">
+      <div class="h-[15px] w-full bg-red-400"></div>
+      <p
+        class="text-end md:cursor-pointer md:hover:text-red-200 text-lg font-semibold"
+      >
+        View All
+      </p>
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+</html>

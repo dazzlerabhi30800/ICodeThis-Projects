@@ -1,0 +1,29 @@
+body {
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1580610447943-1bfbef5efe07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0606066e;
+    backdrop-filter: blur(10px);
+}
+
+main,
+footer {
+    position: relative;
+    z-index: 44;
+}
+
+tr:not(:last-child, :first-child) {
+    border-bottom: 1px solid #ccc;
+}
